@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<h1>aaaaaaaaaaaa</h1>
+<input type="file" id="file">
+<button id="btn">上传</button>
+<script src="js/jquery.min.js"></script>
+<script>
+
+    document.getElementById("btn").onclick = function () {
+
+        var formData = new FormData();
+        formData.append('file', document.getElementById("file").files[0]);
+        formData.append("id","bbbbbbbb");
+        $.ajax({
+            url: "http://localhost:8088/upfile",
+            method: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (res) {
+                console.log(res);
+                alert(res)
+            }
+        })
+    }
+
+</script>
+</body>
+</html>

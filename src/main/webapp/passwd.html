@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/config.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="signin">
+<div class="signinpanel">
+    <div class="row">
+        <div class="col-sm-12">
+            <form id="form" method="post" action="ll">
+                <h4 class="no-margins">修改密码</h4>
+                <p class="m-t-md">欢迎来农业物联网溯源后台管理系统</p>
+                <input type="password" name="upasswd" class="form-control uname" placeholder="原密码"/>
+                <input type="text" name="uname" class="form-control uname" placeholder="昵称"/>
+                <input type="password" name="upasswd1" class="form-control pword m-b" placeholder="新密码"/>
+                <input type="password" name="upasswd2" class="form-control pword m-b" placeholder="新密码"/>
+                <a href="/ht/index.html">回到首页</a>
+            </form>
+            <button id="send" class="btn btn-success btn-block">修改</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("#send").click(function () {
+            $.ajax({
+                url: wq.url+'/update',
+                type: 'POST',
+                data: $("#form").serializeArray(),
+                success: function (res) {
+                    if ("success" === res) {
+                        alert("密码修改成功,请重新登录");
+                        window.location.href = wq.loginurl;
+                    } else if ("noequals"===res) {
+                        alert("两次密码输入不一致");
+                    }
+                    else if("wrong"===res){
+                        alert("原密码输入错误");
+                    }
+                }
+            })
+        });
+    })
+</script>
+</body>
+</html>

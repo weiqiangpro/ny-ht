@@ -1,0 +1,256 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+textarea {
+    resize: none;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+/* 将斜体扶正 */
+code, kbd, pre, samp, tt {
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* 统一等宽字体 */
+small {
+    font-size: 12px;
+}
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol {
+    list-style: none;
+}
+
+/* 重置文本格式元素 */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+/* 重置表单元素 */
+legend {
+    color: #000;
+}
+
+/* for ie6 */
+fieldset, img {
+    border: none;
+}
+
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+hr {
+    border: none;
+    height: 1px;
+}
+
+p {
+    line-height: 23px;
+    font-size: 20px;
+    margin: 5px 0;
+    text-indent: 2em;
+    color: #555555;
+}
+
+.chuizhi {
+    display: flex;
+    flex-direction: column;
+}
+
+.chuizhi > div {
+    margin: 10px 0;
+    border-bottom: 1px solid #000;
+}
+
+.chuizhi > div:last-child {
+    border-bottom: 0;
+}
+
+.test_box, .test_bo {
+    width: 100%;
+    height: 500px;
+    font-size: 16px;
+    padding: 13px;
+    border: 1px solid #a0b3d6;
+    line-height: 24px;
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+#img img {
+    width: 160px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+/*************************首页*********************************/
+#sy p, #research p, #news p {
+    text-indent: 0;
+    margin: 17px 0;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+#sy p:hover, #research p:hover, #news p:hover {
+    color: red;
+}
+
+#sy button, #research button, #news button {
+    font-size: 15px;
+    height: 35px;
+    width: 70px;
+    position: relative;
+    top: -7px;
+    float: right;
+}
+
+/*/***********************轮播图***********************************/
+#lujbotu li {
+    height: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#lujbotu img {
+    height: 100%;
+    width: 100%;
+}
+
+#lujbotu input {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+/*/***********************轮播图***********************************/
+
+/*/***********************科研***********************************/
+#keyan p {
+    text-indent: 0;
+}
+
+/*#ky>div{*/
+/*    border: 1px solid #000;*/
+/*}*/
+#keyan .ky {
+    position: relative;
+}
+
+#keyan img {
+    width: 100%;
+}
+
+#keyan input {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+/*/***********************科研***********************************/
+
+/*************************组织结构*********************************/
+#zhongxin p {
+    text-indent: 0;
+    font-size: 17px;
+    color: #555555;
+    cursor: pointer;
+}
+
+#zhongxin > div {
+    cursor: pointer;
+    margin: 0 10px;
+    border-bottom: 1px solid #000;
+}
+
+#zhongxin > div:hover p {
+    color: red;
+}
+
+#zhongxin button {
+    float: right;
+    margin-left: 5px;
+}
+
+
+#bs-example-navbar-collapse-1 > ul > .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+#header li {
+    font-size: 15px;
+}
+
+
+#jianjie .mes p {
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 22px;
+}
+
+#jianjie .mes h1 {
+    margin-bottom: 30px;
+}
+
+#jianjie .mes {
+    padding: 30px;
+}
+
+#shouye {
+    height: 100%;
+}
+
+#date {
+    float: right;
+    text-align: right;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-top: 5px;
+}

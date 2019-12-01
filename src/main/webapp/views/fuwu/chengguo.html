@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农业物联网后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../../css/nav.css">
+    <link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/nav.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/config.js"></script>
+</head>
+<body>
+<div id="header" class="visible-md visible-lg">
+    <div class="nav" style="position: fixed;top: 0;left: 0;">
+        <div class="nav-top">
+            <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="../../images/mini.png" alt=""></div>
+        </div>
+        <ul>
+            <li class="nav-item" style="margin-bottom: 10px;">
+            <a href="/ht/passwd.html">
+                <span style="font-size: 20px;margin-left: 0;">您好!<span style="margin-left: 10px;" class="uname"></span></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/ht/index.html">
+                <span class="icon iconfont icon-changjingguanli nav-icon"></span>
+                <span>首页</span>
+                <span class="icon iconfont icon-right  nav-more"></span>
+            </a>
+        </li>
+            <li class="nav-item">
+                <a>
+                    <span class="icon iconfont icon-jichuguanli nav-icon"></span>
+                    <span>组织结构</span>
+                    <span class="icon iconfont icon-right  nav-more"></span>
+                </a>
+                <ul>
+                    <li><a href="/ht/views/jiegou/jianjie.html"><span>溯源平台简介</span></a></li>
+                    <li><a href="/ht/views/jiegou/jiagou.html"><span>组织架构</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a>
+                    <span class="icon iconfont icon-jishufuwu nav-icon"></span>
+                    <span>新闻中心</span>
+                    <span class="icon iconfont icon-right  nav-more"></span>
+                </a>
+                <ul>
+                    <li>
+                        <a  href="/ht/views/zhongxin/xinwen.html"><span>溯源平台新闻</span></a>
+                    </li>
+                    <li>
+                        <a  href="/ht/views/zhongxin/dongtai.html"><span>行业动态</span></a>
+                    </li>
+                    <li>
+                        <a  href="/ht/views/zhongxin/gonggao.html"><span>政策公告</span></a>
+                    </li>
+                    <li>
+                        <a  href="/ht/views/zhongxin/baodao.html"><span>媒体报道</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a>
+                    <span class="icon iconfont icon-peiwangyindao nav-icon"></span>
+                    <span>科学研究</span>
+                    <span class="icon iconfont icon-right  nav-more"></span>
+                </a>
+                <ul>
+                    <li><a  href="/ht/views/yanjiu/guandian.html"><span>专家观点</span></a></li>
+                    <li><a href="/ht/views/yanjiu/tuandui.html"><span>科研团队</span></a></li>
+                    <li><a href="/ht/views/yanjiu/chanchu.html"><span>科研产出</span></a></li>
+                    <li><a href="/ht/views/yanjiu/jinzhan.html"><span>科研进展</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a>
+                    <span class="icon iconfont icon-shiyongwendang nav-icon"></span>
+                    <span>科技服务</span>
+                    <span class="icon iconfont icon-right  nav-more"></span>
+                </a>
+                <ul>
+                    <li><a href="/ht/views/fuwu/jiedu.html"><span>科学解读</span></a></li>
+                    <li><a href="/ht/views/fuwu/chengguo.html"><span>重点推广成果</span></a></li>
+                    <li><a href="/ht/views/fuwu/hezuo.html"><span>国内合作动态</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a>
+                    <span class="icon iconfont icon-quanxianshenpi nav-icon"></span>
+                    <span>食品溯源</span>
+                    <span class="icon iconfont icon-right  nav-more"></span>
+                </a>
+                <ul>
+
+                    <li><a href="/ht/views/suyuan/fagui.html"><span>政策法规</span></a></li>
+                    <li><a href="/ht/views/suyuan/zixun.html"><span>咨询公告</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                             <a>
+                    <span class="icon iconfont icon-yunyingguanli nav-icon"></span>
+                    <span>产业基地</span>
+                    <span class="icon iconfont icon-right  nav-more"></span>
+                </a>
+                <ul>
+                    <li><a href="/ht/views/jidi/jidijianjie.html"><span>基地简介</span></a></li>
+                    <li><a href="/ht/views/jidi/jidi.html"><span>产业基地</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a>
+                    <span class="icon iconfont icon-shebeikaifa nav-icon"></span>
+                    <span>党建文化</span>
+                    <span class="icon iconfont icon-right  nav-more"></span>
+                </a>
+                <ul>
+                    <li><a href="/ht/views/dang/wenhua.html"><span>党建文化</span></a></li>
+                    <li><a href="/ht/views/dang/dangdongtai.html"><span>党群动态</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container visible-xs visible-sm">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/ht/passwd.html">您好!<span style="margin-left: 10px;" class="uname"></span></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/ht/index.html">首页<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">组织结构 <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ht/views/jiegou/jianjie.html">溯源平台简介</a></li>
+                                <li><a href="/ht/views/jiegou/jianjie.html">组织架构</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">新闻中心<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="/ht/views/zhongxin/xinwen.html">溯源平台新闻</a>
+                                </li>
+                                <li>
+                                    <a  href="/ht/views/zhongxin/dongtai.html">行业动态</a>
+                                </li>
+                                <li>
+                                    <a  href="/ht/views/zhongxin/gonggao.html">政策公告</a>
+                                </li>
+                                <li>
+                                    <a  href="/ht/views/zhongxin/baodao.html">媒体报道</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a  class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true"  aria-expanded="false">科学研究<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a  href="/ht/views/yanjiu/guandian.html">专家观点</a></li>
+                                <li><a href="/ht/views/yanjiu/tuandui.html">科研团队</a></li>
+                                <li><a href="/ht/views/yanjiu/chanchu.html">科研产出</a></li>
+                                <li><a href="/ht/views/yanjiu/jinzhan.html">科研进展</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"aria-expanded="false">科技服务<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ht/views/fuwu/jiedu.html">科学解读</a></li>
+                                <li><a href="/ht/views/fuwu/chengguo.html">重点推广成果</a></li>
+                                <li><a href="/ht/views/fuwu/hezuo.html">国内合作动态</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"  aria-expanded="false">食品溯源<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                 <!--                                <li><a href="/ht/views/suyuan/chaxun.html">追溯查询</a></li>-->
+                                <li><a href="/ht/views/suyuan/fagui.html">政策法规</a></li>
+                                <li><a href="/ht/views/suyuan/zixun.html">咨询公告</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a  class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false" herf="/ht/view/jidi/jidi.html">产业基地<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a herf="/ht/view/jidi/jidijianjie.html">基地简介</a></li>
+                                <li><a herf="/ht/view/jidi/jidi.html">产业基地</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">党建文化<span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ht/views/dang/wenhua.html">党建文化</a></li>
+                                <li><a href="/ht/views/dang/dangdongtai.html">党群动态</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+</div>
+<div id="ptxinwen">
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h1 style="color:#337ab7;">科技服务 / 重点推广成果</h1>
+                <div style="text-align: right">
+                    <button type="button" class="btn btn-info" onclick="show_null()">添加</button>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">内容</h2>
+                </div>
+                <div class="panel-body mes" id="zhongxin">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="about-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="myModalLabel" style="text-align: center;">修改框</h3>
+            </div>
+            <div class="modal-body">
+                <span id="date"> 日期:<input type="date"></span>
+                <div class="form-group" style="float: left;margin-left: 20px;">
+                    <label for="insert_pho" class="btn btn-info">选择图片</label>
+                    <input type="file" style="display:none" id="insert_pho"/>
+                </div>
+                <button class="btn btn-info"  style="float: left;margin-left: 20px;" onclick="up_pho()">确认添加</button>
+                <textarea class="test_box" id="mes">
+                    </textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#about-model">关闭</button>
+                <button type="button" id="xiugai" class="btn btn-primary" onclick="updata()">确认修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var add = true;
+
+    function updata() {
+        console.log(add);
+        if (add) {
+            if (confirm("是否确认修改?")) {
+                $.ajax({
+                    url: wq.url + "/chengguo/up/" + $("#mes").attr("iid"),
+                    data: {
+                        message: $("#mes").val(),
+                        date: $("#date input").val()
+                    },
+                    method: "PUT",
+                    success: function (res) {
+                          if ("success" === res.msg) {
+                            alert("修改成功!");
+                            getall();
+                        } else {
+                            alert("修改失败!")
+                        }
+                        $("#about-model").modal('toggle');
+                    }
+                })
+            }
+        } else {
+            if (confirm("是否确认添加?")) {
+                $.ajax({
+                    url: wq.url + "/chengguo/add",
+                    data: {
+                        message: $("#mes").val(),
+                        date: $("#date input").val()
+                    },
+                    method: "POST",
+                    success: function (res) {
+                           if ("success" === res.msg) {
+                            alert("添加成功!");
+                            getall();
+                        } else {
+                            alert("添加失败!")
+                        }
+                        $("#about-model").modal('toggle');
+                    }
+                })
+            }
+        }
+
+    }
+
+    function show(id) {
+        add = true;
+        $("#myModalLabel").html("修改框");
+        $("#xiugai").html("确认修改");
+        $.ajax({
+            url: wq.url + "/chengguo/get/" + id,
+            method: "GET",
+            success: function (res) {
+                $("#date input").val(res.extend.mes.date);
+                $("#mes").val(res.extend.mes.message);
+                $("#mes").attr("iid", res.extend.mes.id);
+                $("#about-model").modal('toggle');
+            }
+        })
+    }
+
+    function show_null() {
+   add = false;
+ $("#date input").val("");
+        $("#myModalLabel").html("添加框");
+        $("#xiugai").html("确认添加");
+        $("#mes").val("");
+        $("#about-model").modal('toggle');
+    }
+
+    function dele(id) {
+        if (confirm("是否确认删除?")) {
+            $.ajax({
+                url: wq.url + "/chengguo/de/" + id,
+                method: "DELETE",
+                success: function (res) {
+                    if ("success" === res.msg) {
+                        getall()
+                    } else {
+                        alert("删除失败!")
+                    }
+                }
+            })
+        }
+    }
+
+    function getall() {
+        $.ajax({
+            url: wq.url + "/chengguo/all",
+            method: "GET",
+            success: function (res) {
+                $("#zhongxin").empty();
+                res.extend.mes.forEach((arr, index) => {
+                    $("#zhongxin").append(
+                        '<div class="row">' +
+                        '<br/>' +
+                        '<div class="col-md-10">' +
+                        ' <p>' + arr.message.split('\n')[0] + '</p>' +
+                        ' </div>' +
+                        ' <div class="col-md-2">' +
+                        ' <button type="button" class="btn btn-danger" name="dongtai" onclick="dele(' + arr.id + ')">删除</button>' +
+                        '  <button type="button" class="btn btn-info" name="dongtai" onclick="show(' + arr.id + ')">修改</button>' +
+                        ' </div>' +
+                        ' <br/>' +
+                        '</div>'
+                    )
+                })
+            }
+        })
+    }
+    $(function () {
+        getall();
+    })
+</script>
+</body>
+</html>

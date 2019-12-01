@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test"
+                        userId="root"
+                        password="123">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+<!--制定bean的位置-->
+        <javaModelGenerator targetPackage="qt.bean"
+                            targetProject="./src/main/src">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!--指定sql映射文件的位置-->
+        <sqlMapGenerator targetPackage="mapper2"
+                         targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <!--            制定dao接口生成的位置,mapper接口-->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="qt.dao"
+                             targetProject="./src/main/src">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+<!--   制定每个表的生成策略 -->
+
+
+
+<!--                <table tableName="sy" domainObjectName="Sy">-->
+<!--                    <columnOverride column="message" jdbcType="VARCHAR" />-->
+<!--                </table>-->
+
+        <table tableName="keyan" domainObjectName="Keyan">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+<!--        <table tableName="jianjie" domainObjectName="Jianjie">-->
+<!--            <columnOverride column="message" jdbcType="VARCHAR"/>-->
+<!--        </table>-->
+        <table tableName="gonggao" domainObjectName="Gonggao">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="dongtai" domainObjectName="Dongtai">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="xinwen" domainObjectName="Xinwen">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="guandian" domainObjectName="Guandian">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="jiedu" domainObjectName="Jiedu">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="fagui" domainObjectName="Fagui">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+<!--                <table tableName="jiagou" domainObjectName="Jiagou">-->
+<!--                    <columnOverride column="message" jdbcType="VARCHAR"/>-->
+<!--                </table>-->
+        <table tableName="baodao" domainObjectName="Baodao">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="tuandui" domainObjectName="Tuandui">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="chanchu" domainObjectName="Chanchu">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="jinzhan" domainObjectName="Jinzhan">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="chengguo" domainObjectName="Chengguo">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="dangdongtai" domainObjectName="Dongdongtai">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="hezuo" domainObjectName="Hezuo">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+<!--        <table tableName="chaxun" domainObjectName="Chaxun">-->
+<!--            <columnOverride column="message" jdbcType="VARCHAR"/>-->
+<!--        </table>-->
+        <table tableName="wenhua" domainObjectName="Wenhua">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="zixun" domainObjectName="Zixun">
+            <columnOverride column="message" jdbcType="VARCHAR"/>
+        </table>
+<!--                <table tableName="dijianjie" domainObjectName="Dijianjie">-->
+<!--                    <columnOverride column="message" jdbcType="VARCHAR"/>-->
+<!--                </table>-->
+<!--        <table tableName="users" domainObjectName="Users"/>-->
+<!--        <table tableName="admin" domainObjectName="Admin"/>-->
+    </context>
+</generatorConfiguration>
